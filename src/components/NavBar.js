@@ -1,20 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import home from '../Images/home.svg'
+import notification from '../Images/notification.svg'
+import profile from '../Images/person_outline.svg'
+import activity from '../Images/Vector.svg'
+import logo from '../Images/Logo.svg'
 
 const NavBar = () => {
     return (
         <>
             <nav className="bg-white border-gray-200 dark:bg-gray-900">
-                <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+                <div className="flex flex-wrap justify-center items-center mx-auto max-w-screen-xl p-4">
                     <Link href="https://flowbite.com" className="flex items-center">
                         <img
-                            src="https://flowbite.com/docs/images/logo.svg"
-                            className="h-8 mr-3"
-                            alt="Flowbite Logo"
+                            src={logo}
+                            className="h-20 mr-3"
+                            alt="saving app"
                         />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                            Saving App
-                        </span>
                     </Link>
                 </div>
             </nav>
@@ -23,7 +25,7 @@ const NavBar = () => {
                     <div className="flex items-center">
                         <ul
                             // Align at the bottom on mobile screens
-                            className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm"
+                            className="flex flex-row font-medium mt-0 mr-6 mx-8 space-x-8 text-sm"
                         >
                             <li>
                                 <Link
@@ -31,7 +33,7 @@ const NavBar = () => {
                                     className="text-gray-900 dark:text-white hover:underline"
                                     aria-current="page"
                                 >
-                                    Home
+                                    <img src={home} alt="Home" className="h-8 mr-3" />
                                 </Link>
                             </li>
                             <li>
@@ -39,7 +41,7 @@ const NavBar = () => {
                                     to="/activity"
                                     className="text-gray-900 dark:text-white hover:underline"
                                 >
-                                    Activity
+                                    <img src={notification} alt="notification" className="h-8 mr-3"/>
                                 </Link>
                             </li>
                             <li>
@@ -47,7 +49,7 @@ const NavBar = () => {
                                     to="/transaction"
                                     className="text-gray-900 dark:text-white hover:underline"
                                 >
-                                    Transaction
+                                     <img src={activity} alt="transaction" className="h-8 mr-3"/>
                                 </Link>
                             </li>
                             <li>
@@ -55,7 +57,7 @@ const NavBar = () => {
                                     to="/profile"
                                     className="text-gray-900 dark:text-white hover:underline"
                                 >
-                                    Profile
+                                     <img src={profile} alt="profile" className="h-8 mr-3" />
                                 </Link>
                             </li>
                         </ul>

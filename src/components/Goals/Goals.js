@@ -1,5 +1,5 @@
 import React from 'react';
-import goalCard from '../../Constant';
+import { goalCard } from '../../Constant';
 import { useNavigate } from 'react-router-dom';
 
 const Goals = () => {

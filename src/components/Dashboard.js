@@ -1,12 +1,18 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import goals from '../Images/Goals.svg'
 
 const Dashboard = () => {
     let history = useNavigate();
     return (
-        <div>
-            <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onClick={() => { history("/Goals") }}> + Create A Goal</button>
+        <div className="flex items-center justify-between">
+            <span className="font-bold text-3xl ml-3">Goals</span>
+            <button onClick={() => history('/goals')} className="ml-auto mr-3">
+                <img src={goals} alt="goals" className="h-15" />
+            </button>
         </div>
+
+
     )
 }
 

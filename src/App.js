@@ -11,6 +11,8 @@ import {
   Route,
   Routes
 } from "react-router-dom";
+import Rules from './components/Goals/Rules';
+import Rule from './components/Goals/Rule';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path='/profile' element={<Profile />} />
           <Route path='/goals' element={<Goals />} />
           <Route path='/goal/:goalId' element={<Goal />} />
+          <Route path='/rules' element={<Rules />} />
+          <Route path='/rule/:ruleId' element={<Rule />} />
         </Routes>
       </div>
     </Router>
